@@ -1,0 +1,45 @@
+name: Daily Data Update
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at midnight every day
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+ 
+      - name: Run script to update data
+        run: |
+          # Run your script here that makes the API call, fetches data, and writes it to a CSV file
+          # Example command: python update_data.py
+          python scripts/get_games.py    
+  
+      - name: Configure Git
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Authenticate with token
+        run: |
+          git remote add origin_with_token https://${{ secrets.TOKEN_GIT }}@github.com/${{ github.repository }}
+
+      - name: Pull changes from remote repository
+        run: |
+          git pull origin main || echo "No new changes to pull"
+      
+      - name: Commit changes
+        run: |
+          git add .
+          git commit -m "Update data - ${{ github.run_id }}"
+
+      - name: Push changes to main branch
+        run: |
+          git push origin_with_token HEAD:main
