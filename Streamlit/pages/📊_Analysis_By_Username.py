@@ -10,7 +10,7 @@ import os
 
 class Analysis:
     def __init__(self, user):
-        self.data = pd.read_csv("../data/user.csv", index_col=0)
+        self.data = pd.read_csv("../../data/user.csv", index_col=0)
         self.user = user
     
     def total_games(self):
@@ -141,10 +141,10 @@ def get_games_by_month(username):
                 # Handle the exception here as per your requirement
     
     # Ensure the directory exists
-    os.makedirs('../data', exist_ok=True)
+    os.makedirs('../../data', exist_ok=True)
 
     # Create the file if it doesn't exist and open it for writing
-    with open('../data/user.csv', 'w', newline='') as f:
+    with open('../../data/user.csv', 'w', newline='') as f:
         w = csv.DictWriter(f, games[0].keys())
         w.writeheader()
         for game in games.values():
