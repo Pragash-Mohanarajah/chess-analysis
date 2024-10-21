@@ -5,7 +5,7 @@ import plotly.express as px
 
 class Analysis:
     def __init__(self):
-        self.data = pd.read_csv("../../data/data.csv", index_col=0)
+        self.data = pd.read_csv("./data/data.csv", index_col=0)
     
     def total_games(self):
         return self.data.shape[0]   
