@@ -1,6 +1,6 @@
 # Automated Chess Game Analyzer
 
-Welcome to the Chess Game Analyzer project! This repository contains over 3800 chess games collected from chess.com and analyzed using various techniques. The results of the analysis are presented in a Streamlit web application for easy exploration and visualization.
+Welcome to the Chess Game Analyzer project! This repository contains over 18000 chess games collected from chess.com and analyzed using various techniques. The results of the analysis are presented in a Streamlit web application for easy exploration and visualization.
 
 ## Overview
 
@@ -10,7 +10,7 @@ Chess is a game of strategy and tactics, and analyzing games played by skilled p
 
 ## Features
 
-- **Large Dataset**: The dataset consists of over 3800 chess games played by players of varying skill levels.
+- **Large Dataset**: The dataset consists of over 18000 chess games played by players of varying skill levels.
 - **Analysis**: The games are analyzed using state-of-the-art techniques to extract valuable information such as opening moves, common tactics, and endgame patterns.
 - **Streamlit Web Application**: The results of the analysis are presented in an interactive web application built with Streamlit, allowing users to explore the data easily.
 - **Up-to-date data**: The dataset is updated everyday at midnight through Github Actions.
@@ -21,19 +21,19 @@ Chess is a game of strategy and tactics, and analyzing games played by skilled p
 1. **Clone the Repository**: Clone this repository to your local machine using the following command:
 
     ``` bash
-    git clone https://github.com/GermanPaul12/My-Chess-Com-Games-Analyzed-and-presented-on-Streamlit
+    git clone https://github.com/Pragash-Mohanarajah/chess-analysis
     ```
 
 2. **Install Dependencies**: Navigate to the project directory and install the required dependencies:
 
     ``` bash
-    cd My-Chess-Com-Games-Analyzed-and-presented-on-Streamlit
+    cd chess-analysis
     pip install -r requirements.txt
     ```
 
 3. **Change username**: Insert your own username under `/scripts` in the `get_names.py`:
 
-    - Replace `codinggambit` with your own username
+    - Replace `PragashMohanarajah` with your own username
     - Alternatively you can skip this part completely and use the page *📊Analysis by Username* for that you can proceed with step 4
 
 4. **Run the Web Application**: Start the Streamlit web application by running the following command:
@@ -47,6 +47,7 @@ This will launch the web application in your default web browser, allowing you t
 ## Contributors
 
 - [German Paul](https://github.com/GermanPaul12)
+- [Pragash Mohanarajah](https://github.com/Pragash-Mohanarajah)
 
 ## License
 

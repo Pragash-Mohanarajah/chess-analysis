@@ -12,21 +12,5 @@ with st.container():
 
 # ---- MAIN SECTION ----
 
-with st.container():
-    st.write('---')
-    st.header('Target Goal')
-    st.write('A web-app which offers a quick overview of my chess game analysis. The Analysis can be found under 📊:blue[Analysis] in the sidebar.')
-    
-# ---- Credits ----
-with st.container():
-    st.write('---')
-    st.header('Contributers')
-    
-with st.container():
-    st.write('---')
-    st.header('Social Media')
-    badge(type="github", name="Pragash-Mohanarajah")
-    st.markdown("[LinkedIn](https://www.linkedin.com/in/pragash-mohanarajah/)")
-
 # ---- FOOTER SECTION ----
 st.markdown("<br>",unsafe_allow_html=True)
