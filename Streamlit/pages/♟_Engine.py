@@ -121,7 +121,7 @@ engine = ChessEngine()
 
 # Fetch the FEN from the query parameter (GET request)
 query_params = st.experimental_get_query_params()
-fen_from_query = query_params.get("fen", [None])[0].replace("_", " ") if query_params.get("fen", [None])[0] else None
+fen_from_query = query_params.get("fen", [None])[0].replace("_", " ").replace("%2F", "/") if query_params.get("fen", [None])[0] else None
 
 # Add a text input for the FEN string (as fallback or if the query param isn't available)
 fen_input = st.text_input("Enter FEN:", value=fen_from_query or chess.Board().fen())
@@ -131,6 +131,7 @@ if fen_input:
     try:
         board = chess.Board(fen_input)
         best_move = engine.get_best_move_from_board(board)
+        st.experimental_set_query_params(best_move=best_move)
         st.write(f"Best move: {best_move}")
         board = engine.make_move(board, best_move)
         st.write("Board after making the move:")
