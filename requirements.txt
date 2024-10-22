@@ -4,3 +4,4 @@ chess.com
 plotly
 matplotlib
 streamlit-extras
+torch
