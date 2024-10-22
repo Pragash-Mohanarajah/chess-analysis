@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_extras.badges import badge
 
 # PageConfig
 st.set_page_config(page_title='Homepage',page_icon='🏠')
