@@ -40,6 +40,6 @@ jobs:
           git add .
           git commit -m "Update data - ${{ github.run_id }}"
 
-      - name: Push changes to main branch
+      - name: Push changes to master branch
         run: |
-          git push origin_with_token HEAD:main
+          git push origin_with_token HEAD:master
