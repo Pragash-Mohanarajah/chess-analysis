@@ -134,7 +134,7 @@ if fen_input:
         st.write(f"Best move: {best_move}")
         board = engine.make_move(board, best_move)
         st.write("Board after making the move:")
-        board
+        st.write(board)
     except ValueError:
         st.error("Invalid FEN string. Please enter a valid FEN.")
 else:
