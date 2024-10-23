@@ -29,7 +29,7 @@ jobs:
 
       - name: Pull latest changes from remote repository
         run: |
-          git pull origin main || echo "No new changes to pull"
+          git pull origin master || echo "No new changes to pull"
 
       - name: Commit changes
         run: |
